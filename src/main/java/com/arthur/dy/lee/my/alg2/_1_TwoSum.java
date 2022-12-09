@@ -1,6 +1,7 @@
 package com.arthur.dy.lee.my.alg2;
 
-import com.alibaba.druid.support.json.JSONUtils;
+
+import cn.hutool.json.JSONUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,8 +30,8 @@ public class _1_TwoSum {
 
     public static void main(String[] args) {
         int[] nums = { 3, 2, 4 };
-        System.out.println(JSONUtils.toJSONString(twoSum(nums, 6)));
+        System.out.println(JSONUtil.toJsonStr(twoSum(nums, 6)));
         int[] nums2 = { 2, 7, 11, 15 };
-        System.out.println(JSONUtils.toJSONString(twoSum(nums2, 9)));
+        System.out.println(JSONUtil.toJsonStr(twoSum(nums2, 9)));
     }
 }
