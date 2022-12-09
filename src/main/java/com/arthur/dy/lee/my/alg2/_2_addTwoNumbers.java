@@ -1,7 +1,6 @@
 package com.arthur.dy.lee.my.alg2;
 
-import arthur.dy.lee.alg.common.GenListNode;
-import arthur.dy.lee.alg.common.ListNode;
+import com.arthur.dy.lee.common.ListNode;
 
 public class _2_addTwoNumbers {
 
@@ -33,8 +32,8 @@ public class _2_addTwoNumbers {
     }
 
     public static void main(String[] args) {
-        ListNode l1 = GenListNode.genNode9999999();
-        ListNode l2 = GenListNode.genNode9999();
+        ListNode l1 = ListNode.buildListNode(new int[] { 9, 9, 9, 9, 9, 9 });
+        ListNode l2 = ListNode.buildListNode(new int[] { 9, 9, 9 });
         ListNode ret = _2_addTwoNumbers.addTwoNumbers(l1, l2);
         //        ListNode l1 = ListNode.buildListNode(new int[] { 2, 4, 6, 8 });
         System.out.println(ret);
