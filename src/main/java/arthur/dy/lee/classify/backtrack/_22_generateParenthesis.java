@@ -1,4 +1,4 @@
-package arthur.dy.lee.best.backtrack;
+package arthur.dy.lee.classify.backtrack;
 
 import cn.hutool.json.JSONUtil;
 
