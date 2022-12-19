@@ -1,4 +1,4 @@
-package arthur.dy.lee.my.alg2;
+package arthur.dy.lee.best.medium;
 
 import arthur.dy.lee.common.ListNode;
 
