@@ -31,13 +31,13 @@ public class _34_searchRange {
     public static void main(String[] args) {
         int[] nums = new int[] { 5, 7, 7, 8, 8, 10 };
         int target = 8;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best._34_searchRange.searchRange(nums, target)));
+        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums, target)));
 
         target = 6;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best._34_searchRange.searchRange(nums, target)));
+        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums, target)));
 
         int[] nums2 = new int[] { 2, 2 };
         target = 2;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best._34_searchRange.searchRange(nums2, target)));
+        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums2, target)));
     }
 }
