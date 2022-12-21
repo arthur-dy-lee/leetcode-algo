@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.backtrack;
+package arthur.dy.lee.classify.backtracking;
 
 import java.util.ArrayList;
 import java.util.HashMap;

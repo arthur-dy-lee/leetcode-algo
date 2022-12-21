@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank;
+package arthur.dy.lee.blank.medium;
 
 import cn.hutool.json.JSONUtil;
 
@@ -28,16 +28,27 @@ public class _34_searchRange {
 
     }
 
+    private static int[] searchResult(int[] nums, int start) {
+        int left = start;
+        while (left > 0 && nums[left - 1] == nums[left]) {
+            left--;
+        }
+        while (start <= nums.length - 2 && nums[start] == nums[start + 1]) {
+            start++;
+        }
+        return new int[] { left, start };
+    }
+
     public static void main(String[] args) {
         int[] nums = new int[] { 5, 7, 7, 8, 8, 10 };
         int target = 8;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums, target)));
+        System.out.println(JSONUtil.toJsonStr(_34_searchRange.searchRange(nums, target)));
 
         target = 6;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums, target)));
+        System.out.println(JSONUtil.toJsonStr(_34_searchRange.searchRange(nums, target)));
 
         int[] nums2 = new int[] { 2, 2 };
         target = 2;
-        System.out.println(JSONUtil.toJsonStr(arthur.dy.lee.best.medium._34_searchRange.searchRange(nums2, target)));
+        System.out.println(JSONUtil.toJsonStr(_34_searchRange.searchRange(nums2, target)));
     }
 }

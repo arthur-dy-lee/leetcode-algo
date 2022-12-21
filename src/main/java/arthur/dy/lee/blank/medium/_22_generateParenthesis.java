@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.backtrack;
+package arthur.dy.lee.blank.medium;
 
 import cn.hutool.json.JSONUtil;
 
@@ -23,10 +23,7 @@ public class _22_generateParenthesis {
 
     public static List<String> generateParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        if (n == 0) {
-            return result;
-        }
-        backtrack(result, n, new StringBuilder(), 0, 0);
+
         return result;
     }
 
