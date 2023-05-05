@@ -1,6 +1,6 @@
-package arthur.dy.lee.best;
+package arthur.dy.lee.answer;
 
-import arthur.dy.lee.best.easy._21_mergeTwoLists_2;
+import arthur.dy.lee.answer.easy._21_mergeTwoLists_2;
 import arthur.dy.lee.common.ListNode;
 import junit.framework.Assert;
 import org.junit.jupiter.api.Test;
