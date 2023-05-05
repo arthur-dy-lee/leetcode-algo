@@ -1,1 +1,3 @@
-# leetcode-algo
+# leetcode-algorithm
+
+leetcode算法
