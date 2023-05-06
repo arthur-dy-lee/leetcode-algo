@@ -26,7 +26,8 @@ package arthur.dy.lee.blank.easy;
 public class _9_isPalindrome {
 
     public static boolean isPalindrome(int x) {
-        return Boolean.FALSE;
+
+        return Boolean.TRUE;
     }
 
     public static void main(String[] args) {

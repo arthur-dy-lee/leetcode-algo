@@ -38,5 +38,8 @@ public class _58_lengthOfLastWord {
 
         s = "luffy is still joyboy";
         System.out.println(6 == _58_lengthOfLastWord.lengthOfLastWord(s));
+
+        String s2 = "a";
+        System.out.println(1 == _58_lengthOfLastWord.lengthOfLastWord(s2));
     }
 }

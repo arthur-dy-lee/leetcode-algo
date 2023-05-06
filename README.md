@@ -1,3 +1,22 @@
 # leetcode-algorithm
 
 leetcode算法
+
+_13_romanToInt, 1
+_14_longestCommonPrefix, 0.5
+_20_isValidBracket, 1
+_21_mergeTwoLists， 1
+_26_removeDuplicates, 1
+_35_searchInsert， 1
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,10 +9,10 @@ import arthur.dy.lee.common.ListNode;
 public class _21_mergeTwoLists {
 
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+
         ListNode dummy = new ListNode();
 
         return dummy.next;
-
     }
 
     public static void main(String[] args) {

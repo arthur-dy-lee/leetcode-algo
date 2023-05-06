@@ -1,5 +1,7 @@
 package arthur.dy.lee.answer.easy;
 
+import cn.hutool.json.JSONUtil;
+
 /**
  * 27. 移除元素
  * <p>
@@ -35,11 +37,33 @@ package arthur.dy.lee.answer.easy;
  */
 public class _27_removeElement {
 
-    public int removeElement(int[] nums, int val) {
-        return 0;
+    public static int removeElement(int[] nums, int val) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        int left = 0;
+        int right = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (right == nums.length) {
+                break;
+            }
+            if (nums[i] == val) {
+                right++;
+                continue;
+            }
+            nums[left++] = nums[right++];
+        }
+        return left;
     }
 
     public static void main(String[] args) {
+        int[] nums1 = new int[] { 3, 2, 2, 3 };
+        System.out.println(_27_removeElement.removeElement(nums1, 3) + ", nums1={}" + JSONUtil.toJsonStr(nums1));
 
+        int[] nums2 = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
+        System.out.println(_27_removeElement.removeElement(nums2, 2) + ", nums2={}" + JSONUtil.toJsonStr(nums2));
+
+        //        int[] nums3 = new int[] { 3, 2, 2, 3 };
+        //        System.out.println(_27_removeElement.removeElement(nums3, 3) + ", nums3={}" + nums3);
     }
 }

@@ -33,14 +33,14 @@ public class _14_longestCommonPrefix {
 
     public static void main(String[] args) {
         String[] strs = { "flower", "flow", "flight" };
-        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs));
+        System.out.println("strs1=" + _14_longestCommonPrefix.longestCommonPrefix(strs));
         String[] strs2 = { "dog", "racecar", "car" };
-        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs2));
+        System.out.println("strs2=" + _14_longestCommonPrefix.longestCommonPrefix(strs2));
 
         String[] strs3 = { "a" };
-        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs3));
+        System.out.println("strs3=" + _14_longestCommonPrefix.longestCommonPrefix(strs3));
         String[] strs4 = { "abc", "a", "acd" };
-        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs4));
+        System.out.println("strs4=" + _14_longestCommonPrefix.longestCommonPrefix(strs4));
 
     }
 }
