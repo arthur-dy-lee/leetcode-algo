@@ -32,13 +32,17 @@ public class _3_lengthOfLongestSubstring {
 
     public static void main(String[] args) {
         String s = "abcabcbb";
-//        _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s);
-//        s = "bbbbb";
-//        _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s);
-//        s = "pwwkew";
-//        _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s);
+        System.out.println(3 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        s = "bbbbb";
+        System.out.println(1 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        s = "pwwkew";
+        System.out.println(3 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = "abba";
-        _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s);
+        System.out.println(2 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        s = " ";
+        System.out.println(1 == _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        s = "dvdf";
+        System.out.println(3 == _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
     }
 
 }
