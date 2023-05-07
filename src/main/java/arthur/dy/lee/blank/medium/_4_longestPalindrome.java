@@ -18,8 +18,14 @@ package arthur.dy.lee.blank.medium;
 public class _4_longestPalindrome {
 
     public static String longestPalindrome(String s) {
-        return "";
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        String res = new String();
+
+        return res;
     }
+
 
 
     public static void main(String[] args) {

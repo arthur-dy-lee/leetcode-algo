@@ -11,7 +11,7 @@ _35_searchInsert， 1
 
 #### medium
 _3_lengthOfLongestSubstring, 1
-
+_4_longestPalindrome, 2
 
 
 
