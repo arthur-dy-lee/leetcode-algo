@@ -22,19 +22,27 @@ package arthur.dy.lee.answer.medium;
  */
 public class _7_reverseInteger {
     public static int reverse(int x) {
-        int result = 0;
+        int res = 0;
         while (x != 0) {
-            if (result < Integer.MIN_VALUE / 10 || result > Integer.MAX_VALUE / 10) {
+            //每次取末尾数字
+            int tmp = x % 10;
+            //判断是否 大于 最大32位整数
+            if (res > Integer.MAX_VALUE / 10 || (res == Integer.MAX_VALUE / 10 && Integer.MAX_VALUE % 10 > 7)) {
                 return 0;
             }
-            result = result * 10 + x % 10;
-            x = x / 10;
+            //判断是否 小于 最小32位整数
+            if (res < Integer.MIN_VALUE / 10 || (res == Integer.MIN_VALUE / 10 && Integer.MIN_VALUE % 10 < -8)) {
+                return 0;
+            }
+            res = res * 10 + tmp;
+            x /= 10;
         }
-        System.out.println(result);
-        return result;
+        return res;
     }
 
     public static void main(String[] args) {
+        System.out.println(Integer.MAX_VALUE);
+
         int x1 = 123;
         _7_reverseInteger.reverse(x1);
         int x2 = -123;
