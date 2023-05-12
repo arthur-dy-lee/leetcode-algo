@@ -1,5 +1,8 @@
 package arthur.dy.lee.blank.medium;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 12. 整数转罗马数字
  * 罗马数字包含以下七种字符： I， V， X， L，C，D 和 M。
@@ -50,6 +53,27 @@ package arthur.dy.lee.blank.medium;
  */
 public class _12_intToRoman {
 
+    private static final Map<Integer, String> map = new HashMap() {{
+        put(1, "I");
+        put(4, "IV");
+        put(5, "V");
+        put(9, "IX");
+        put(10, "X");
+        put(40, "XL");
+        put(50, "L");
+        put(90, "XC");
+        put(100, "C");
+        put(400, "CD");
+        put(500, "D");
+        put(900, "CM");
+        put(1000, "M");
+    }};
+
+    private static final String[] thousand = new String[] { "M", "MM", "MM" };
+    private static final String[] hundred  = new String[] { "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM" };
+    private static final String[] ten      = new String[] { "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC" };
+    private static final String[] digit    = new String[] { "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX" };
+
     /**
      * 时间复杂度：O(1)。计算量与输入数字的大小无关。
      * 空间复杂度：O(1)。
@@ -58,23 +82,40 @@ public class _12_intToRoman {
      * @return
      */
     public static String intToRoman(int num) {
+        if (num == 0) {
+            return "";
+        }
         StringBuffer roman = new StringBuffer();
-
+        if (num / 1000 > 0) {
+            roman.append(thousand[num / 1000 - 1]);
+        }
+        int h = num % 1000;
+        if ((h / 100) > 0) {
+            roman.append(hundred[(h / 100) - 1]);
+        }
+        int t = h % 100;
+        if ((t / 10) > 0) {
+            roman.append(ten[(t / 10) - 1]);
+        }
+        if (t % 10 > 0) {
+            roman.append(digit[t % 10 - 1]);
+        }
+        System.out.println("num=" + num + ", roman=" + roman);
         return roman.toString();
     }
 
     public static void main(String[] args) {
         int num = 0;
         num = 3;
-        System.out.println(_12_intToRoman.intToRoman(num));
+        System.out.println(_12_intToRoman.intToRoman(num).equals("III"));
         num = 4;
-        System.out.println(_12_intToRoman.intToRoman(num));
+        System.out.println(_12_intToRoman.intToRoman(num).equals("IV"));
         num = 9;
-        System.out.println(_12_intToRoman.intToRoman(num));
+        System.out.println(_12_intToRoman.intToRoman(num).equals("IX"));
         num = 58;
-        System.out.println(_12_intToRoman.intToRoman(num));
+        System.out.println(_12_intToRoman.intToRoman(num).equals("LVIII"));
         num = 1994;
-        System.out.println(_12_intToRoman.intToRoman(num));
+        System.out.println(_12_intToRoman.intToRoman(num).equals("MCMXCIV"));
 
     }
 }

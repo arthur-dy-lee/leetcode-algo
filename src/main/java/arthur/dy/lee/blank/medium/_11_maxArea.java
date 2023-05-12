@@ -9,20 +9,32 @@ package arthur.dy.lee.blank.medium;
  * <p>
  * 返回容器可以储存的最大水量。
  * <p>
- * 说明：你不能倾斜容器。看图看文件
+ * 说明：你不能倾斜容器。看图看problems.md文件
  */
 public class _11_maxArea {
 
     public static int maxArea(int[] height) {
-
+        if (height.length == 0) {
+            return 0;
+        }
         int max = 0;
-
+        int left = 0;
+        int right = height.length - 1;
+        while (left < right) {
+            if (height[left] < height[right]) {
+                max = Math.max(max, height[left] * (right - left));
+                left++;
+            } else {
+                max = Math.max(max, height[right] * (right - left));
+                right--;
+            }
+        }
         return max;
     }
 
     public static void main(String[] args) {
         int[] height = new int[] { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-        System.out.println(_11_maxArea.maxArea(height));
+        System.out.println(49 == _11_maxArea.maxArea(height));
     }
 
 }
