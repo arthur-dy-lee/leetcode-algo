@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.classify.backtracking;
 
 import cn.hutool.json.JSONUtil;
 
@@ -35,21 +35,42 @@ import java.util.List;
  * 1 <= candidates.length <= 100
  * 1 <= candidates[i] <= 50
  * 1 <= target <= 30
- * <p>
+ *
  * https://leetcode.cn/problems/combination-sum-ii/solutions/14753/hui-su-suan-fa-jian-zhi-python-dai-ma-java-dai-m-3/
  */
 public class _40_combinationSum2 {
+    public static boolean[] used = new boolean[]{};
     public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
-        Deque<Integer> depth = new ArrayDeque<>();
+        Deque<Integer> combine = new ArrayDeque<>();
         Arrays.sort(candidates);
-        boolean[] used = new boolean[candidates.length];
-        dfs(candidates, target, 0, res, depth, used);
-
+        recursive(candidates, target, res, combine, 0);
         return res;
     }
 
-    public static void dfs(int[] candidates, int target, int begin, List<List<Integer>> res, Deque<Integer> depth,
+    private static void recursive(int[] candidates, int target, List<List<Integer>> res, Deque<Integer> combine,
+                                  int begin) {
+        if (target == 0) {
+            res.add(new ArrayList<>(combine));
+            return;
+        }
+        for (int i = begin; i < candidates.length - 1; i++) {
+            // 大剪枝：减去 candidates[i] 小于 0，减去后面的 candidates[i + 1]、candidates[i + 2] 肯定也小于 0，因此用 break
+            if (target - candidates[i] < 0) {
+                break;
+            }
+
+            // 小剪枝：同一层相同数值的结点，从第 2 个开始，候选数更少，结果一定发生重复，因此跳过，用 continue
+            if (i > begin && candidates[i] == candidates[i - 1]) {
+                continue;
+            }
+
+            combine.addLast(candidates[i]);
+            recursive(candidates, target - candidates[i], res, combine, i + 1);
+            combine.removeLast();
+        }
+    }
+    public static void self_dfs(int[] candidates, int target, int begin, List<List<Integer>> res, Deque<Integer> depth,
                            boolean[] used) {
         if (target < 0) {
             return;
@@ -72,12 +93,11 @@ public class _40_combinationSum2 {
             }
             used[i] = Boolean.TRUE;
             depth.push(candidates[i]);
-            dfs(candidates, target - candidates[i], i + 1, res, depth, used);
+            self_dfs(candidates, target - candidates[i], i + 1, res, depth, used);
             used[i] = Boolean.FALSE;
             depth.pop();
         }
     }
-
     public static void main(String[] args) {
         int[] candidates = new int[] { 10, 1, 2, 7, 6, 1, 5 };
         int target = 8;

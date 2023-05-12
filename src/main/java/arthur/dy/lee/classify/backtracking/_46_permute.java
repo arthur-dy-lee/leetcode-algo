@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.classify.backtracking;
 
 import cn.hutool.json.JSONUtil;
 

@@ -50,6 +50,8 @@ public class _39_combinationSum {
     /**
      * @param candidates 候选数组
      * @param begin      搜索起点
+     *                   排列问题，讲究顺序（即 [2, 2, 3] 与 [2, 3, 2] 视为不同列表时），需要记录哪些数字已经使用过，此时用 used 数组；
+     *                   组合问题，不讲究顺序（即 [2, 2, 3] 与 [2, 3, 2] 视为相同列表时），需要按照某种顺序搜索，此时使用 begin 变量。
      * @param len        冗余变量，是 candidates 里的属性，可以不传
      * @param target     每减去一个元素，目标值变小
      * @param path       从根结点到叶子结点的路径，是一个栈

@@ -18,7 +18,7 @@ _4_longestPalindrome, 2
 _6_zConvert，2
 _7_reverseInteger, 0.5
 _8_myAtoi, 1
-
+_47_permuteUnique, 1
 
 
 
