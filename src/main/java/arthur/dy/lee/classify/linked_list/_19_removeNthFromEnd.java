@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.classify.linked_list;
 
 import arthur.dy.lee.common.ListNode;
 

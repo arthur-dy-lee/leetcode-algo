@@ -8,8 +8,8 @@ import java.util.List;
 /**
  * 18. 四数之和
  * <p>
- * 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
- * <p>
+ * 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组
+ * [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
  * 0 <= a, b, c, d < n
  * a、b、c 和 d 互不相同
  * nums[a] + nums[b] + nums[c] + nums[d] == target
@@ -38,6 +38,9 @@ public class _18_fourSum {
     }
 
     public static void main(String[] args) {
+        System.out.println(Math.pow(10,4));
+        System.out.println(Math.pow(2,2));
+
         int[] nums = new int[] { 1, 0, -1, 0, -2, 2 };
         int target = 0;
         System.out.println(JSONUtil.toJsonStr(_18_fourSum.fourSum(nums, target)));

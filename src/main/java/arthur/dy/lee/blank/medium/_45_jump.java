@@ -20,15 +20,26 @@ package arthur.dy.lee.blank.medium;
  * 提示:
  * 1 <= nums.length <= 104
  * 0 <= nums[i] <= 1000
+ * 题目保证可以到达 nums[n-1]
  */
 public class _45_jump {
 
     public static int jump(int[] nums) {
+        if (nums == null || nums.length < 1 || nums.length > Math.pow(10, 4)) {
+            return 0;
+        }
+        int count = 0;
 
-        return 0;
+        return count;
     }
 
     public static void main(String[] args) {
+        int[] nums8 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 0 };
+        System.out.println(2 == _45_jump.jump(nums8));  //10
+
+        int[] nums7 = new int[] { 1, 2, 1, 1, 1 };
+        System.out.println(3 == _45_jump.jump(nums7));
+
         int[] nums6 = new int[] { 2, 3, 1, 1, 4 };
         System.out.println(2 == _45_jump.jump(nums6));  //2
 

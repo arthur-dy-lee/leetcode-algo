@@ -15,7 +15,7 @@ package arthur.dy.lee.answer.medium;
  * 1 <= s.length <= 1000
  * s 仅由数字和英文字母组成
  */
-public class _4_longestPalindrome {
+public class _5_longestPalindrome {
 
     /**
      * 中心扩散
@@ -185,9 +185,9 @@ public class _4_longestPalindrome {
 
     public static void main(String[] args) {
         String s = "babad";
-        _4_longestPalindrome.longestPalindrome1(s);
+        _5_longestPalindrome.longestPalindrome1(s);
         s = "cbbd";
-        _4_longestPalindrome.longestPalindrome1(s);
+        _5_longestPalindrome.longestPalindrome1(s);
 
         System.out.println(1 / 2);
     }

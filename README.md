@@ -19,7 +19,7 @@ _6_zConvert，2
 _7_reverseInteger, 0.5
 _8_myAtoi, 1
 _47_permuteUnique, 1
-
+_45_jump, 1
 
 
 

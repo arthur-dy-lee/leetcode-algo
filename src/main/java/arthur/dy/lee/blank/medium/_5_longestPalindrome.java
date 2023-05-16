@@ -15,7 +15,7 @@ package arthur.dy.lee.blank.medium;
  * 1 <= s.length <= 1000
  * s 仅由数字和英文字母组成
  */
-public class _4_longestPalindrome {
+public class _5_longestPalindrome {
 
     public static String longestPalindrome(String s) {
         if (s == null || s.length() <= 1) {
@@ -27,13 +27,14 @@ public class _4_longestPalindrome {
     }
 
 
-
     public static void main(String[] args) {
         String s = "babad";
-        _4_longestPalindrome.longestPalindrome(s);
+        boolean res = "bab".equals(_5_longestPalindrome.longestPalindrome(s))
+                || "aba".equals(_5_longestPalindrome.longestPalindrome(s));
+        System.out.println(res);
         s = "cbbd";
-        _4_longestPalindrome.longestPalindrome(s);
-
-        System.out.println(1 / 2);
+        System.out.println("bb".equals(_5_longestPalindrome.longestPalindrome(s)));
+        s = "bb";
+        System.out.println("bb".equals(_5_longestPalindrome.longestPalindrome(s)));
     }
 }

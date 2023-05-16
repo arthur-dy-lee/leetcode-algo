@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.medium;
+package arthur.dy.lee.classify.greedy;
 
 /**
  * 45. 跳跃游戏 II
