@@ -66,6 +66,6 @@ public class _47_permuteUnique {
         System.out.println(_47_permuteUnique.permuteUnique(nums2));
         System.out.println("------------------------\n");
         int[] nums1 = new int[] { 1, 2, 3 };
-        System.out.println(_46_permute.permute(nums1));
+        System.out.println(_47_permuteUnique.permuteUnique(nums1));
     }
 }

@@ -67,31 +67,31 @@ public class _31_nextPermutation {
 
     public static void main(String[] args) {
         int[] nums = new int[] { 4, 5, 2, 6, 3, 1 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums);
+        _31_nextPermutation.nextPermutation(nums);
         System.out.println(JSONUtil.toJsonStr(nums));
 
         int[] nums1 = new int[] { 1, 2, 3 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums1);
+        _31_nextPermutation.nextPermutation(nums1);
         System.out.println(JSONUtil.toJsonStr(nums1));
 
         int[] nums2 = new int[] { 3, 2, 1 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums2);
+        _31_nextPermutation.nextPermutation(nums2);
         System.out.println(JSONUtil.toJsonStr(nums2));
 
         int[] nums3 = new int[] { 1, 1, 5 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums3);
+        _31_nextPermutation.nextPermutation(nums3);
         System.out.println(JSONUtil.toJsonStr(nums3));
 
         int[] nums4 = new int[] { 1, 5, 1 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums4);
+        _31_nextPermutation.nextPermutation(nums4);
         System.out.println(JSONUtil.toJsonStr(nums4));
 
         int[] nums5 = new int[] { 1, 1 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums5);
+        _31_nextPermutation.nextPermutation(nums5);
         System.out.println(JSONUtil.toJsonStr(nums5));
 
         int[] nums6 = new int[] { 5, 1, 1 };
-        arthur.dy.lee.my.alg2._31_nextPermutation.nextPermutation(nums6);
+        _31_nextPermutation.nextPermutation(nums6);
         System.out.println(JSONUtil.toJsonStr(nums6));
     }
 }
