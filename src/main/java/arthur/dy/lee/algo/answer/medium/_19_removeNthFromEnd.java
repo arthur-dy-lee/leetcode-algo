@@ -1,6 +1,6 @@
-package arthur.dy.lee.answer.medium;
+package arthur.dy.lee.algo.answer.medium;
 
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.common.ListNode;
 
 /**
  * 19. 删除链表的倒数第 N 个结点

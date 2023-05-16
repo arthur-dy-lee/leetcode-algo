@@ -1,7 +1,7 @@
-package arthur.dy.lee.answer;
+package arthur.dy.lee.algo.answer;
 
-import arthur.dy.lee.answer.easy._21_mergeTwoLists_2;
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.answer.easy._21_mergeTwoLists_2;
+import arthur.dy.lee.algo.common.ListNode;
 import junit.framework.Assert;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

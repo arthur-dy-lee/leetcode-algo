@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.string;
+package arthur.dy.lee.algo.classify.string;
 
 /**
  * 最长回文子串

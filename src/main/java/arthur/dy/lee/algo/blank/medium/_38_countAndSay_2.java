@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.algo.blank.medium;
 
 /**
  * 38. 外观数列

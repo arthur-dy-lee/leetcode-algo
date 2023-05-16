@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.easy;
+package arthur.dy.lee.algo.blank.easy;
 
 /**
  * 58. 最后一个单词的长度

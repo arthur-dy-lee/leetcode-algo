@@ -1,6 +1,6 @@
-package arthur.dy.lee.classify.linked_list;
+package arthur.dy.lee.algo.classify.linked_list;
 
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.common.ListNode;
 
 /**
  * 19. 删除链表的倒数第 N 个结点

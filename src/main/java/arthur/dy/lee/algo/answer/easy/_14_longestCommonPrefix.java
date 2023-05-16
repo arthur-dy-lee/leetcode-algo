@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.easy;
+package arthur.dy.lee.algo.answer.easy;
 
 /**
  * 14. 最长公共前缀

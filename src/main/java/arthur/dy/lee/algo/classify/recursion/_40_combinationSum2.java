@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.recursion;
+package arthur.dy.lee.algo.classify.recursion;
 
 import cn.hutool.json.JSONUtil;
 

@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.easy;
+package arthur.dy.lee.algo.blank.easy;
 
 import cn.hutool.json.JSONUtil;
 

@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.algo.blank.medium;
 
 /**
  * 33. 搜索旋转排序数组

@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.recursion;
+package arthur.dy.lee.algo.classify.recursion;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

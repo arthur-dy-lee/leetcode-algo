@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.medium;
+package arthur.dy.lee.algo.answer.medium;
 
 import java.util.ArrayList;
 import java.util.Deque;

@@ -1,6 +1,6 @@
-package arthur.dy.lee.classify.recursion;
+package arthur.dy.lee.algo.classify.recursion;
 
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.common.ListNode;
 
 /**
  * 24. 两两交换链表中的节点

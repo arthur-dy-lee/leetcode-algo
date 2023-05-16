@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.algo.blank.medium;
 
 /**
  * 43. 字符串相乘

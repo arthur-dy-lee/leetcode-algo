@@ -1,6 +1,6 @@
-package arthur.dy.lee.blank.easy;
+package arthur.dy.lee.algo.blank.easy;
 
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.common.ListNode;
 
 
 /**

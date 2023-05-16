@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.greedy;
+package arthur.dy.lee.algo.classify.greedy;
 
 /**
  * 45. 跳跃游戏 II

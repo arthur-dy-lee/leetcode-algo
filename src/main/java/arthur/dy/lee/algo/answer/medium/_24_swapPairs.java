@@ -1,6 +1,6 @@
-package arthur.dy.lee.answer.medium;
+package arthur.dy.lee.algo.answer.medium;
 
-import arthur.dy.lee.common.ListNode;
+import arthur.dy.lee.algo.common.ListNode;
 
 /**
  * 24. 两两交换链表中的节点

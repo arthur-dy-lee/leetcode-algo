@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.easy;
+package arthur.dy.lee.algo.answer.easy;
 
 /**
  * 733. 图像渲染

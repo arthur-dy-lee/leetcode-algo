@@ -1,4 +1,4 @@
-package arthur.dy.lee.common;
+package arthur.dy.lee.algo.common;
 
 public class ListNode {
     public int      val;

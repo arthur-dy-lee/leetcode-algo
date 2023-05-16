@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.easy;
+package arthur.dy.lee.algo.blank.easy;
 
 /**
  * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。

@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.backtracking;
+package arthur.dy.lee.algo.classify.backtracking;
 
 /**
  * 79. 单词搜索

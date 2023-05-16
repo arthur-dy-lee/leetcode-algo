@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.easy;
+package arthur.dy.lee.algo.answer.easy;
 
 /**
  * 给你一个整数 x ，如果 x 是一个回文整数，返回 true ；否则，返回 false 。

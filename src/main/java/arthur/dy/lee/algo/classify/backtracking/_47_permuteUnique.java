@@ -1,6 +1,6 @@
-package arthur.dy.lee.classify.backtracking;
+package arthur.dy.lee.algo.classify.backtracking;
 
-import arthur.dy.lee.blank.medium._46_permute;
+import arthur.dy.lee.algo.blank.medium._46_permute;
 
 import java.util.ArrayList;
 import java.util.Arrays;

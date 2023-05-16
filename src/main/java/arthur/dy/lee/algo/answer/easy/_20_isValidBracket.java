@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.easy;
+package arthur.dy.lee.algo.answer.easy;
 
 import java.util.Deque;
 import java.util.HashMap;

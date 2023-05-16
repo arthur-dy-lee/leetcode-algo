@@ -1,4 +1,4 @@
-package arthur.dy.lee.answer.medium;
+package arthur.dy.lee.algo.answer.medium;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,13 +32,13 @@ public class _3_lengthOfLongestSubstring {
 
     public static void main(String[] args) {
         String s = "abcabcbb";
-        System.out.println(3 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        System.out.println(3 == arthur.dy.lee.algo.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = "bbbbb";
-        System.out.println(1 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        System.out.println(1 == arthur.dy.lee.algo.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = "pwwkew";
-        System.out.println(3 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        System.out.println(3 == arthur.dy.lee.algo.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = "abba";
-        System.out.println(2 == arthur.dy.lee.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
+        System.out.println(2 == arthur.dy.lee.algo.blank.medium._3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = " ";
         System.out.println(1 == _3_lengthOfLongestSubstring.lengthOfLongestSubstring(s));
         s = "dvdf";

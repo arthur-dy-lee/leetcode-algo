@@ -1,4 +1,4 @@
-package arthur.dy.lee.classify.dynamic_programming;
+package arthur.dy.lee.algo.classify.dynamic_programming;
 
 /**
  * 最长回文子串

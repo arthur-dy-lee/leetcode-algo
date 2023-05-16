@@ -1,4 +1,4 @@
-package arthur.dy.lee.blank.medium;
+package arthur.dy.lee.algo.blank.medium;
 
 /**
  * 215. 数组中的第K个最大元素
