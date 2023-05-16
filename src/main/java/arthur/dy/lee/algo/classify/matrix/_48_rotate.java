@@ -1,7 +1,6 @@
-package arthur.dy.lee.algo.answer.medium;
+package arthur.dy.lee.algo.classify.matrix;
 
 import cn.hutool.json.JSONUtil;
-
 
 /**
  * 48. 旋转图像
