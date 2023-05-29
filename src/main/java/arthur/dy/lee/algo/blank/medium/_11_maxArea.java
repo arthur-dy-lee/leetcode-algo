@@ -9,7 +9,7 @@ package arthur.dy.lee.algo.blank.medium;
  * <p>
  * 返回容器可以储存的最大水量。
  * <p>
- * 说明：你不能倾斜容器。看图看problems.md文件
+ * 说明：你不能倾斜容器。看图看README.md文件
  */
 public class _11_maxArea {
 

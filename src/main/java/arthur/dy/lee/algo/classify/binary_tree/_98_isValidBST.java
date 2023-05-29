@@ -13,7 +13,7 @@ import arthur.dy.lee.algo.common.TreeNode;
  *
  *
  * 示例 1：
- * 图片可看problems.md文件
+ * 图片可看README.md文件
  * 输入：root = [2,1,3]
  * 输出：true
  *

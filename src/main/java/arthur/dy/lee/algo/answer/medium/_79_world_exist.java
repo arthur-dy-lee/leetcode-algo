@@ -24,7 +24,7 @@ package arthur.dy.lee.algo.answer.medium;
  * 1 <= word.length <= 15
  * board 和 word 仅由大小写英文字母组成
  * <p>
- * 看图请看problems.md文件
+ * 看图请看README.md文件
  */
 public class _79_world_exist {
     public static final int[][]     DIRECTIONS = { { -1, 0 }, { 0, -1 }, { 0, 1 }, { 1, 0 } };

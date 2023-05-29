@@ -10,17 +10,17 @@ import arthur.dy.lee.algo.common.TreeNode;
  * 如果两个树在结构上相同，并且节点具有相同的值，则认为它们是相同的。
  * <p>
  * 示例 1：
- * 图片可看problems.md文件
+ * 图片可看README.md文件
  * 输入：p = [1,2,3], q = [1,2,3]
  * 输出：true
  * <p>
  * 示例 2：
- * 图片可看problems.md文件
+ * 图片可看README.md文件
  * 输入：p = [1,2], q = [1,null,2]
  * 输出：false
  * <p>
  * 示例 3：
- * 图片可看problems.md文件
+ * 图片可看README.md文件
  * 输入：p = [1,2,1], q = [1,1,2]
  * 输出：false
  * <p>
