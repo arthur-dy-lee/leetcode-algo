@@ -1,4 +1,4 @@
-package arthur.dy.lee.algo.classify.binary_tree;
+package arthur.dy.lee.algo.blank.easy;
 
 import arthur.dy.lee.algo.common.ColorNode;
 import arthur.dy.lee.algo.common.TreeNode;
@@ -73,20 +73,7 @@ public class _145_postorderTraversal {
 
         List<Integer> res = new ArrayList<>();
         Stack<ColorNode> stack = new Stack<>();
-        stack.push(new ColorNode(root, "white"));
 
-        while (!stack.empty()) {
-            ColorNode cn = stack.pop();
-            if (cn.color.equals("white")) {
-                stack.push(new ColorNode(cn.node, "gray"));
-                if (cn.node.right != null)
-                    stack.push(new ColorNode(cn.node.right, "white"));
-                if (cn.node.left != null)
-                    stack.push(new ColorNode(cn.node.left, "white"));
-            } else {
-                res.add(cn.node.val);
-            }
-        }
 
         return res;
     }
@@ -112,7 +99,6 @@ public class _145_postorderTraversal {
                 stack.push(root);
                 root = root.right;
             }
-
         }
         return res;
     }

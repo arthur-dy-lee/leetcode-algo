@@ -64,6 +64,28 @@ public class _94_inorderTraversal {
         inorder(root.right, res);
     }
 
+    public static List<Integer> inorderTraversal4(TreeNode root) {
+        List<Integer> ans = new ArrayList<>();
+        if (root == null) {
+            return ans;
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode tmp = stack.pop();
+            if (tmp != null ) {
+                stack.push(tmp.right);
+                stack.push(tmp);
+                stack.push(tmp.left);
+            } else {
+                if (!stack.isEmpty()) {
+                    ans.add(stack.pop().val);
+                }
+            }
+        }
+        return ans;
+    }
+
     public static List<Integer> inorderTraversal2_iter(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Deque<TreeNode> stk = new LinkedList<>();
@@ -136,6 +158,16 @@ public class _94_inorderTraversal {
 
         System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal()));
         System.out.println(JSONUtil.toJsonStr(node1.inorderTraversalReturList())
-                .equals(JSONUtil.toJsonStr(_94_inorderTraversal.inorderTraversal2_iter(node1))));
+                .equals(JSONUtil.toJsonStr(_94_inorderTraversal.inorderTraversal4(node1))));
+        System.out.println("--------------------");
+
+        List<Integer> list = _94_inorderTraversal.inorderTraversal2_iter(node1);
+        StringBuilder sb = new StringBuilder();
+        for (Integer a : list) {
+            sb.append(a).append(",");
+        }
+        String res = sb.deleteCharAt(sb.length() - 1).toString();
+        System.out.println("res=" + res);
+        System.out.println("4,2,6,5,7,1,3".equals(res));
     }
 }

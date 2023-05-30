@@ -1,4 +1,4 @@
-package arthur.dy.lee.algo.classify.binary_tree;
+package arthur.dy.lee.algo.answer.easy;
 
 import arthur.dy.lee.algo.common.TreeNode;
 

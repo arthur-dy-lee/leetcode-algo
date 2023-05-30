@@ -45,12 +45,40 @@ public class TreeNode {
             node = stack.pop();
             node = node.right;
         }
-        if (res != null && res.length() > 2) {
+        if (res != null && res.length() > 1) {
             return res.deleteCharAt(res.length() - 1).toString();
         }
         return res.toString();
 
     }
+
+    //    public String preorderTraversal2() {
+    //        StringBuilder res = new StringBuilder();
+    //        TreeNode root = this;
+    //        if (root == null) {
+    //            return res.toString();
+    //        }
+    //        Deque<TreeNode> stack = new LinkedList<>();
+    //        stack.push(root);
+    //        while (!stack.isEmpty()) {
+    //            TreeNode tmp = stack.pop();
+    //            if (tmp != null) {
+    //                res.append(tmp.val).append(",");
+    //                stack.push(tmp.right);
+    //                stack.push(tmp.left);
+    //            } else {
+    //                if (!stack.isEmpty()) {
+    //                    stack.pop();
+    //                }
+    //            }
+    //        }
+    //        if (res != null && res.length() > 1) {
+    //            return res.deleteCharAt(res.length() - 1).toString();
+    //        }
+    //        return res.toString();
+    //    }
+
+
 
     public List<Integer> preorderTraversalReturnList() {
         TreeNode root = this;
@@ -81,7 +109,7 @@ public class TreeNode {
     public String inorderTraversal() {
         StringBuilder res = new StringBuilder();
         inorder(this, res);
-        if (res != null && res.length() > 2) {
+        if (res != null && res.length() > 1) {
             return res.deleteCharAt(res.length() - 1).toString();
         }
         return res.toString();
@@ -94,6 +122,33 @@ public class TreeNode {
         inorder(root.left, res);
         res.append(root.val).append(",");
         inorder(root.right, res);
+    }
+
+    public String inorderTraversal2() {
+        StringBuilder res = new StringBuilder();
+        TreeNode root = this;
+        if (root == null) {
+            return res.toString();
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode tmp = stack.pop();
+            int tmpVal = tmp != null ? tmp.val : -1;
+            if (tmp != null) {
+                stack.push(tmp.right);
+                stack.push(tmp);
+                stack.push(tmp.left);
+            } else {
+                if (!stack.isEmpty()) {
+                    res.append(stack.pop().val).append(",");
+                }
+            }
+        }
+        if (res != null && res.length() > 1) {
+            return res.deleteCharAt(res.length() - 1).toString();
+        }
+        return res.toString();
     }
 
     public List<Integer> inorderTraversalReturList() {
@@ -141,7 +196,36 @@ public class TreeNode {
                 root = root.right;
             }
         }
-        if (res != null && res.length() > 2) {
+        if (res != null && res.length() > 1) {
+            return res.deleteCharAt(res.length() - 1).toString();
+        }
+        return res.toString();
+    }
+
+    public String postorderTraversal2() {
+        StringBuilder res = new StringBuilder();
+        TreeNode root = this;
+        if (root == null) {
+            return res.toString();
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode tmp = stack.pop();
+            if (tmp != null) {
+                stack.push(tmp);
+                stack.push(tmp.right);
+                stack.push(tmp.left);
+            } else {
+                if (!stack.isEmpty()) {
+                    while (stack.peek() == null) {
+                        stack.pop();
+                    }
+                    res.append(stack.pop().val).append(",");
+                }
+            }
+        }
+        if (res != null && res.length() > 1) {
             return res.deleteCharAt(res.length() - 1).toString();
         }
         return res.toString();
@@ -187,10 +271,13 @@ public class TreeNode {
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
 
-        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal()));
-        System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal()));
-        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal()));
-        System.out.println(node1.postorderTraversal());
+        //        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal()));
+        //        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal2()));
+        //        System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal()));
+        System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal2()));
+        //        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal()));
+        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal2()));
+        System.out.println(node1.postorderTraversal2());
     }
 
 }
