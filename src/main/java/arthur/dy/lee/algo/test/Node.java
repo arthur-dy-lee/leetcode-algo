@@ -1,4 +1,4 @@
-package arthur.dy.lee;
+package arthur.dy.lee.algo.test;
 
 public class Node<T> {
 
