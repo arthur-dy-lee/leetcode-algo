@@ -22,9 +22,27 @@ package arthur.dy.lee.algo.answer.easy;
  * 输入：x = 10
  * 输出：false
  * 解释：从右向左读, 为 01 。因此它不是一个回文数。
+ *
+ * 进阶：你能不将整数转为字符串来解决这个问题吗？
  */
 public class _9_isPalindrome {
 
+    public static boolean isPalindrome2(int x) {
+        if (x < 0) {
+            return Boolean.FALSE;
+        }
+        char[] ch = String.valueOf(x).toCharArray();
+        int len = ch.length;
+        int i = 0;
+        while (i <= len) {
+            if (ch[i] != ch[len - 1]) {
+                return Boolean.FALSE;
+            }
+            i++;
+            len--;
+        }
+        return Boolean.TRUE;
+    }
     public static boolean isPalindrome(int x) {
         // 特殊情况：
         // 如上所述，当 x < 0 时，x 不是回文数。
