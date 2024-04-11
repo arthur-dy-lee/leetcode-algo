@@ -26,21 +26,23 @@ package arthur.dy.lee.algo.answer.easy;
 public class _14_longestCommonPrefix {
 
     public static String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return "";
-        }
-        int length = strs[0].length();
-        int count = strs.length;
-        for (int i = 0; i < length; i++) {
-            char c = strs[0].charAt(i);
-            for (int j = 1; j < count; j++) {
-                if (i == strs[j].length() || strs[j].charAt(i) != c) {
-                    return strs[0].substring(0, i);
+        StringBuilder result = new StringBuilder();
+        String first = strs[0];
+        for (int i = 0; i < first.length(); i++) {
+            char tmp = first.charAt(i);
+
+            for (int j = 1; j < strs.length; j++) {
+                String s = strs[j];
+                if (i > s.length() - 1) {
+                    return result.toString();
+                }
+                if (tmp != s.charAt(i)) {
+                    return result.toString();
                 }
             }
+            result.append(tmp);
         }
-        return strs[0];
-
+        return result.toString();
     }
 
     public static void main(String[] args) {

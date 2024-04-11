@@ -1,5 +1,8 @@
 package arthur.dy.lee.algo.blank.easy;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 罗马数字包含以下七种字符: I， V， X， L，C，D 和 M。
  * <p>
@@ -23,22 +26,57 @@ package arthur.dy.lee.algo.blank.easy;
  */
 public class _13_romanToInt {
 
-    public static int romanToInt(String s) {
+    public static Map<String, Integer> map = new HashMap() {{
+        put("I", 1);
+        put("V", 5);
+        put("X", 10);
+        put("L", 50);
+        put("C", 100);
+        put("D", 500);
+        put("M", 1000);
+        put("IV", 4);
+        put("IX", 9);
+        put("XL", 40);
+        put("XC", 90);
+        put("CD", 400);
+        put("CM", 900);
 
-        return 0;
+    }};
+
+    public static int romanToInt(String s) {
+        if (s == null || s.length() == 0) {
+            throw new IllegalArgumentException("param error");
+        }
+        int i = 0;
+        int result = 0;
+        while (i < s.length() - 1) {
+
+            if (map.get(s.substring(i, i + 2)) != null) {
+                result = map.get(s.substring(i, i + 2)) + result ;
+                i = i + 2;
+            } else if (map.get(s.substring(i, i + 1)) != null) {
+                result = map.get(s.substring(i, i + 1)) + result ;
+                i = i + 1;
+            }
+        }
+        if (i  == s.length() - 1) {
+            result = map.get(s.substring(s.length() - 1)) + result ;
+        }
+
+        return result;
     }
 
     public static void main(String[] args) {
         String s = "";
         s = "III";
-        System.out.println(_13_romanToInt.romanToInt(s));
+        System.out.println(_13_romanToInt.romanToInt(s) == 3);
         s = "IV";
-        System.out.println(_13_romanToInt.romanToInt(s));
+        System.out.println(_13_romanToInt.romanToInt(s) == 4);
         s = "IX";
-        System.out.println(_13_romanToInt.romanToInt(s));
+        System.out.println(_13_romanToInt.romanToInt(s) == 9);
         s = "LVIII";
-        System.out.println(_13_romanToInt.romanToInt(s));
+        System.out.println(_13_romanToInt.romanToInt(s) == 58);
         s = "MCMXCIV";
-        System.out.println(_13_romanToInt.romanToInt(s));
+        System.out.println(_13_romanToInt.romanToInt(s) == 1994);
     }
 }

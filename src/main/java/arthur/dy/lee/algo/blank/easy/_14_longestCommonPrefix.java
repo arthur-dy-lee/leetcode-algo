@@ -26,21 +26,20 @@ package arthur.dy.lee.algo.blank.easy;
 public class _14_longestCommonPrefix {
 
     public static String longestCommonPrefix(String[] strs) {
+        StringBuilder result = new StringBuilder();
 
-        return strs[0];
-
+        return result.toString();
     }
 
     public static void main(String[] args) {
         String[] strs = { "flower", "flow", "flight" };
-        System.out.println("strs1=" + _14_longestCommonPrefix.longestCommonPrefix(strs));
+        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs).equals("fl"));
         String[] strs2 = { "dog", "racecar", "car" };
-        System.out.println("strs2=" + _14_longestCommonPrefix.longestCommonPrefix(strs2));
+        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs2).equals(""));
 
         String[] strs3 = { "a" };
-        System.out.println("strs3=" + _14_longestCommonPrefix.longestCommonPrefix(strs3));
+        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs3).equals("a"));
         String[] strs4 = { "abc", "a", "acd" };
-        System.out.println("strs4=" + _14_longestCommonPrefix.longestCommonPrefix(strs4));
-
+        System.out.println(_14_longestCommonPrefix.longestCommonPrefix(strs4).equals("a"));
     }
 }
