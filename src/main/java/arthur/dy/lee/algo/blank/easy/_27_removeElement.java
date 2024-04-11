@@ -34,6 +34,9 @@ import cn.hutool.json.JSONUtil;
  * 0 <= nums.length <= 100
  * 0 <= nums[i] <= 50
  * 0 <= val <= 100
+ * <p>
+ * <p>
+ * +3
  */
 public class _27_removeElement {
 
@@ -41,7 +44,6 @@ public class _27_removeElement {
         if (nums.length == 0) {
             return 0;
         }
-
         return 0;
     }
 

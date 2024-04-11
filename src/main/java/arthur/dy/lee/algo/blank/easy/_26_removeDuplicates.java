@@ -29,22 +29,31 @@ package arthur.dy.lee.algo.blank.easy;
  * 1 <= nums.length <= 3 * 104
  * -104 <= nums[i] <= 104
  * nums 已按 升序 排列
+ *
+ * +1
  */
 public class _26_removeDuplicates {
 
     public static int removeDuplicates(int[] nums) {
+        if (nums.length <= 1) {
+            return 1;
+        }
 
-        return 0;
+
+        return 1;
     }
 
     public static void main(String[] args) {
+        int[] nums3 = new int[] { 1, 1 };
+        System.out.println(_26_removeDuplicates.removeDuplicates(nums3) == 1);
+
         int[] nums0 = new int[] { 1, 1, 1, 2 };
-        System.out.println(_26_removeDuplicates.removeDuplicates(nums0));
+        System.out.println(_26_removeDuplicates.removeDuplicates(nums0) == 2);
 
         int[] nums1 = new int[] { 1, 1, 2 };
-        System.out.println(_26_removeDuplicates.removeDuplicates(nums1));
+        System.out.println(_26_removeDuplicates.removeDuplicates(nums1) == 2);
 
         int[] nums2 = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-        System.out.println(_26_removeDuplicates.removeDuplicates(nums2));
+        System.out.println(_26_removeDuplicates.removeDuplicates(nums2) == 5);
     }
 }

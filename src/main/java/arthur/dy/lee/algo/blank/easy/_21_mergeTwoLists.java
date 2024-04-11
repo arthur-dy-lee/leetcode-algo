@@ -12,7 +12,7 @@ public class _21_mergeTwoLists {
 
         ListNode dummy = new ListNode();
 
-        return dummy.next;
+        return dummy;
     }
 
     public static void main(String[] args) {

@@ -4,6 +4,7 @@ import java.util.Deque;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
+import java.util.Stack;
 
 /**
  * 20. 有效的括号
@@ -26,6 +27,22 @@ public class _20_isValidBracket {
         put('}', '{');
     }};
 
+    public static boolean isValid2(String s) {
+        if (s == null || s.length() <= 1) {
+            return Boolean.FALSE;
+        }
+        int i = 0;
+        Stack<Character> stack = new Stack<>();
+        while (i < s.length()) {
+            if (!stack.isEmpty() && stack.peek() == map.get(s.charAt(i))) {
+                stack.pop();
+            } else {
+                stack.push(s.charAt(i));
+            }
+            i++;
+        }
+        return stack.isEmpty();
+    }
     public static boolean isValid(String s) {
         if (s == null || s.length() == 0 || s.length() % 2 == 1) {
             return Boolean.FALSE;

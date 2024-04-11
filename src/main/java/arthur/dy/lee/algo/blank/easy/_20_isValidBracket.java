@@ -41,6 +41,9 @@ public class _20_isValidBracket {
     };
 
     public static boolean isValid(String s) {
+        if (s == null || s.length() <= 1) {
+            return Boolean.FALSE;
+        }
 
         return Boolean.FALSE;
     }

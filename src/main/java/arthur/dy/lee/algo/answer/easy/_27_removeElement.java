@@ -2,6 +2,8 @@ package arthur.dy.lee.algo.answer.easy;
 
 import cn.hutool.json.JSONUtil;
 
+import java.util.Arrays;
+
 /**
  * 27. 移除元素
  * <p>
@@ -56,6 +58,26 @@ public class _27_removeElement {
         return left;
     }
 
+    public static int removeElement2(int[] nums, int val) {
+        if (nums.length == 0) {
+            return 0;
+        }
+        Arrays.sort(nums);
+        int len = nums.length;
+
+        int k = 0;
+        int count = 0;
+        while (k < len) {
+            if (nums[k] == val) {
+                count++;
+                k++;
+                continue;
+            }
+            nums[k-count] = nums[k];
+            k++;
+        }
+        return len-count;
+    }
     public static void main(String[] args) {
         int[] nums1 = new int[] { 3, 2, 2, 3 };
         System.out.println(_27_removeElement.removeElement(nums1, 3) + ", nums1={}" + JSONUtil.toJsonStr(nums1));
