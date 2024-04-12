@@ -41,6 +41,29 @@ public class _35_searchInsert {
         return ans;
     }
 
+    public static int searchInsert2(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        int mid = 0;
+        while (left <= right) {
+            mid = (left + right) / 2;
+            if (left + 1 >= right) {
+                if (nums[left] >= target) {
+                    return left;
+                } else if (nums[left] < target && target <= nums[right]) {
+                    return right;
+                } else if (nums[right] < target) {
+                    return right + 1;
+                }
+            }
+            if (nums[mid] > target) {
+                right = mid;
+            } else {
+                left = mid;
+            }
+        }
+        return mid;
+    }
     public static void main(String[] args) {
         int[] nums3 = new int[] { 1, 2, 4, 6, 7 };
         int target3 = 3;

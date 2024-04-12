@@ -22,11 +22,14 @@ package arthur.dy.lee.algo.blank.easy;
  * 1 <= s.length <= 104
  * s 仅有英文字母和空格 ' ' 组成
  * s 中至少存在一个单词
+ *
+ * weight
  */
 public class _58_lengthOfLastWord {
     public static int lengthOfLastWord(String s) {
+        int res = 0;
 
-        return 0;
+        return res;
     }
 
     public static void main(String[] args) {

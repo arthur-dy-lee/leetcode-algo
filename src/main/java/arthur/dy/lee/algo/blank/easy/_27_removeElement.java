@@ -36,7 +36,7 @@ import cn.hutool.json.JSONUtil;
  * 0 <= val <= 100
  * <p>
  * <p>
- * +3
+ * weight: +3
  */
 public class _27_removeElement {
 

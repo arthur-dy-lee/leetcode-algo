@@ -1,9 +1,13 @@
-package arthur.dy.lee.algo.blank.easy;
+package arthur.dy.lee.algo.answer.easy;
 
+import arthur.dy.lee.algo.common.ColorNode;
 import arthur.dy.lee.algo.common.TreeNode;
 
 import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 145. 二叉树的后序遍历
@@ -64,16 +68,40 @@ public class _145_postorderTraversal {
      * 链接：https://leetcode.cn/problems/binary-tree-inorder-traversal/solutions/25220/yan-se-biao-ji-fa-yi-chong-tong-yong-qie-jian-ming/
      */
     public static List<Integer> postorderTraversal(TreeNode root) {
-        if (root == null) {
+        if (root == null)
             return new ArrayList<>();
-        }
 
         List<Integer> res = new ArrayList<>();
+        Stack<ColorNode> stack = new Stack<>();
 
 
         return res;
     }
 
+    public static List<Integer> postorderTraversal2(TreeNode root) {
+        if (root == null)
+            return new ArrayList<>();
+
+        List<Integer> res = new ArrayList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode prev = null;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (root.right == null || root.right == prev) {
+                res.add(root.val);
+                prev = root;
+                root = null;
+            } else {
+                stack.push(root);
+                root = root.right;
+            }
+        }
+        return res;
+    }
 
     public static void main(String[] args) {
         TreeNode node7 = new TreeNode(7, null, null);
@@ -84,7 +112,7 @@ public class _145_postorderTraversal {
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
 
-        List<Integer> list = _145_postorderTraversal.postorderTraversal(node1);
+        List<Integer> list = _145_postorderTraversal.postorderTraversal2(node1);
         StringBuilder sb = new StringBuilder();
         for (Integer a : list) {
             sb.append(a).append(",");

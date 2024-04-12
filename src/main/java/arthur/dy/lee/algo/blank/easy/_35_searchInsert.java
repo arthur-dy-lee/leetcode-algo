@@ -25,26 +25,28 @@ public class _35_searchInsert {
 
     public static int searchInsert(int[] nums, int target) {
 
+
         return 0;
     }
 
     public static void main(String[] args) {
         int[] nums3 = new int[] { 1, 2, 4, 6, 7 };
         int target3 = 3;
-        System.out.println(_35_searchInsert.searchInsert(nums3, target3));  //2
+        System.out.println(_35_searchInsert.searchInsert(nums3, target3) == 2);  //2
 
         int[] nums2 = new int[] { 1 };
         int target2 = 0;
-        System.out.println(_35_searchInsert.searchInsert(nums2, target2));  //0
+        System.out.println(_35_searchInsert.searchInsert(nums2, target2) == 0);  //0
 
         int[] nums1 = new int[] { 1, 3, 5, 6 };
         int target = 5;
-        System.out.println(_35_searchInsert.searchInsert(nums1, target));  //2
-
+        //        System.out.println(_35_searchInsert.searchInsert(nums1, target) == 2);  //2
+        //
         target = 2;
-        System.out.println(_35_searchInsert.searchInsert(nums1, target));  //1
+        System.out.println(_35_searchInsert.searchInsert(nums1, target) == 1);  //1
 
         target = 7;
-        System.out.println(_35_searchInsert.searchInsert(nums1, target));  //4
+        System.out.println(_35_searchInsert.searchInsert(nums1, target) == 4);  //4
+
     }
 }
