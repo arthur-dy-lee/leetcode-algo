@@ -78,8 +78,6 @@ public class TreeNode {
     //        return res.toString();
     //    }
 
-
-
     public List<Integer> preorderTraversalReturnList() {
         TreeNode root = this;
         List<Integer> res = new ArrayList<>();
@@ -202,7 +200,7 @@ public class TreeNode {
         return res.toString();
     }
 
-    public String postorderTraversal2() {
+    /*public String postorderTraversal2() {
         StringBuilder res = new StringBuilder();
         TreeNode root = this;
         if (root == null) {
@@ -229,7 +227,7 @@ public class TreeNode {
             return res.deleteCharAt(res.length() - 1).toString();
         }
         return res.toString();
-    }
+    }*/
 
     public List<Integer> postorderTraversalReturList() {
         TreeNode root = this;
@@ -271,13 +269,13 @@ public class TreeNode {
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
 
-        //        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal()));
+        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal()));
         //        System.out.println("1,2,4,5,6,7,3".equals(node1.preorderTraversal2()));
         //        System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal()));
         System.out.println("4,2,6,5,7,1,3".equals(node1.inorderTraversal2()));
-        //        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal()));
-        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal2()));
-        System.out.println(node1.postorderTraversal2());
+        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal()));
+        //        System.out.println("4,6,7,5,2,3,1".equals(node1.postorderTraversal2()));
+        //        System.out.println(node1.postorderTraversal2());
     }
 
 }

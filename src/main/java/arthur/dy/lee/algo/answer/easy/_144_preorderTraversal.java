@@ -94,8 +94,9 @@ class _144_preorderTraversal {
     }
 
     public static List<Integer> preorderTraversal2(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return new ArrayList<>();
+        }
 
         List<Integer> res = new ArrayList<>();
         Deque<TreeNode> stack = new LinkedList<>();
@@ -113,6 +114,48 @@ class _144_preorderTraversal {
                 stack.push(tmp.left);
             }
         }
+        return res;
+    }
+
+    public List<Integer> preorderTraversal3(TreeNode root) {
+        if (root == null)
+            return new ArrayList<>();
+        List<Integer> res = new ArrayList<>();
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode tmp = stack.pop();
+            if (tmp != null) {
+                res.add(tmp.val);
+            }
+            if (tmp.right != null) {
+                stack.push(tmp.right);
+            }
+            if (tmp.left != null) {
+                stack.push(tmp.left);
+            }
+        }
+        return res;
+    }
+
+    public static List<Integer> preorderTraversal4(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        List<Integer> res = new ArrayList<>();
+        while (stack.peek() != null) {
+            TreeNode tmp = stack.pop();
+            res.add(tmp.val);
+            if (tmp.right != null) {
+                stack.push(tmp.right);
+            }
+            if (tmp.left != null) {
+                stack.push(tmp.left);
+            }
+        }
+
         return res;
     }
 

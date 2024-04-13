@@ -45,6 +45,8 @@ import java.util.List;
  * this.right = right;
  * }
  * }
+ *
+ * weight: +3
  */
 public class _145_postorderTraversal {
 
@@ -62,6 +64,9 @@ public class _145_postorderTraversal {
      * <p>
      * 作者：henry
      * 链接：https://leetcode.cn/problems/binary-tree-inorder-traversal/solutions/25220/yan-se-biao-ji-fa-yi-chong-tong-yong-qie-jian-ming/
+     *
+     *
+     * weight: +3
      */
     public static List<Integer> postorderTraversal(TreeNode root) {
         if (root == null) {
