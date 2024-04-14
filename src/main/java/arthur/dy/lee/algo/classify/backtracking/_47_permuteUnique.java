@@ -25,6 +25,8 @@ import java.util.List;
  * 提示：
  * 1 <= nums.length <= 8
  * -10 <= nums[i] <= 10
+ *
+ * https://leetcode.cn/problems/permutations-ii/solutions/9917/hui-su-suan-fa-python-dai-ma-java-dai-ma-by-liwe-2/
  */
 public class _47_permuteUnique {
 

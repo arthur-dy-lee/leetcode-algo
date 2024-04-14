@@ -29,16 +29,28 @@ public class _45_jump {
             return 0;
         }
         int count = 0;
+        int maxStep = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int t1 = nums[i];
+            if (t1 - i > 0) {
+                int t2 = Math.max(nums[t1], nums[t1 - i]);
+                if (t2 > maxStep) {
+                    maxStep = t2;
+                    count++;
+                }
+            }
+
+        }
 
         return count;
     }
 
     public static void main(String[] args) {
-        int[] nums8 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 0 };
-        System.out.println(2 == _45_jump.jump(nums8));  //10
-
-        int[] nums7 = new int[] { 1, 2, 1, 1, 1 };
-        System.out.println(3 == _45_jump.jump(nums7));
+        //        int[] nums8 = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 1, 0 };
+        //        System.out.println(2 == _45_jump.jump(nums8));  //10
+        //
+        //        int[] nums7 = new int[] { 1, 2, 1, 1, 1 };
+        //        System.out.println(3 == _45_jump.jump(nums7));
 
         int[] nums6 = new int[] { 2, 3, 1, 1, 4 };
         System.out.println(2 == _45_jump.jump(nums6));  //2

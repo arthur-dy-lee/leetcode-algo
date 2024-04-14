@@ -23,6 +23,25 @@ import arthur.dy.lee.algo.common.ListNode;
 public class _24_swapPairs_2 {
 
     public static ListNode swapPairs(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+        ListNode dummy = new ListNode();
+        dummy.next = head;
+        ListNode tmp = dummy;
+        while (tmp.next != null && tmp.next.next != null) {
+            ListNode n1 = tmp.next;
+            ListNode n2 = tmp.next.next;
+            tmp.next = n2;
+            n1.next = n2.next;
+            n2.next = n1;
+
+            tmp = n1;
+        }
+        return dummy.next;
+    }
+
+    public static ListNode swapPairs2(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }

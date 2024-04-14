@@ -18,6 +18,8 @@ import java.util.List;
  * <p>
  * 提示：
  * 1 <= n <= 8
+ *
+ * weight: +3
  */
 public class _22_generateParenthesis {
 

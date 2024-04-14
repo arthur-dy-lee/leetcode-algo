@@ -40,37 +40,9 @@ public class _8_myAtoi {
         if (s == null || s.length() == 0) {
             return 0;
         }
-        int begin = 0;
-        while (begin < s.length() && s.charAt(begin) == ' ') {
-            begin++;
-        }
-        int flag = 1;
-        if (s.charAt(begin) == '-') {
-            flag = -1;
-            begin++;
-        }
-        int res = 0;
-        Boolean b = Boolean.TRUE;
-        while (begin < s.length() && s.charAt(begin) != ' ' && s.charAt(begin) != '.') {
-            if (res > Integer.MAX_VALUE) {
-                return Integer.MAX_VALUE;
-            }
-            if (res < Integer.MIN_VALUE) {
-                return Integer.MIN_VALUE;
-            }
-            int tmp = (int)s.charAt(begin);
-            if ((int) tmp < 0 || (int) tmp > 9) {
-                return res;
-            }
-            if (flag == -1 && b) {
-                res = res * 10 + (int) tmp * flag;
-                b = Boolean.FALSE;
-            } else {
-                res = res * 10 + (int) tmp;
-            }
-            begin++;
 
-        }
+        int res = 0;
+
         return res;
     }
 

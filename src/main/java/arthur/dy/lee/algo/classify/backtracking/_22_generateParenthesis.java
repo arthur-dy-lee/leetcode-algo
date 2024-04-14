@@ -18,6 +18,8 @@ import java.util.List;
  * <p>
  * 提示：
  * 1 <= n <= 8
+ * <p>
+ * https://leetcode.cn/problems/generate-parentheses/solutions/35947/hui-su-suan-fa-by-liweiwei1419/
  */
 public class _22_generateParenthesis {
 
@@ -50,6 +52,13 @@ public class _22_generateParenthesis {
 
     }
 
+    public static List<String> generateParenthesis2(int n) {
+        List<String> res = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        dfs2("", 0, 0, n, res);
+        return res;
+    }
+
     /**
      * @param curStr 当前递归得到的结果
      * @param left   左括号已经用了几个
@@ -57,7 +66,7 @@ public class _22_generateParenthesis {
      * @param n      左括号、右括号一共得用几个
      * @param res    结果集
      */
-    private void dfs2(String curStr, int left, int right, int n, List<String> res) {
+    private static void dfs2(String curStr, int left, int right, int n, List<String> res) {
         if (left == n && right == n) {
             res.add(curStr);
             return;
@@ -93,11 +102,12 @@ public class _22_generateParenthesis {
         }
 
     }
+
     public static void main(String[] args) {
 
-        System.out.println(JSONUtil.toJsonStr(_22_generateParenthesis.generateParenthesis(3)));
+        //        System.out.println(JSONUtil.toJsonStr(_22_generateParenthesis.generateParenthesis(2)));
 
-        //        System.out.println(JSONUtil.toJsonStr(_22_generateParenthesis.generateParenthesis(1)));
+        System.out.println(JSONUtil.toJsonStr(_22_generateParenthesis.generateParenthesis2(2)));
     }
 
 }

@@ -23,12 +23,32 @@ import java.util.List;
  */
 public class _17_letterCombinations_2 {
 
-    public static List<String> letterCombinations(String digits) {
-        ArrayList<String> res = new ArrayList<>();
+    private static final String[] val = new String[] { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv",
+            "wxyz" };
 
+    public static List<String> letterCombinations(String digits) {
+        List<String> res = new ArrayList<>();
+        if (digits == null || digits.length() == 0) {
+            return res;
+        }
+        StringBuilder path = new StringBuilder();
+        dfs(digits, res, path, 0);
         return res;
     }
 
+    public static void dfs(String digits, List<String> res, StringBuilder path, int depth) {
+        if (digits.length() == depth) {
+            res.add(path.toString());
+            return;
+        }
+
+        String tmp = val[digits.charAt(depth) - '0'];
+        for (int i = 0; i < tmp.length(); i++) {
+            path.append(tmp.charAt(i));
+            dfs(digits, res, path, depth + 1);
+            path.deleteCharAt(path.length() - 1);
+        }
+    }
     public static void main(String[] args) {
         String digits = "23";
         System.out.println(_17_letterCombinations_2.letterCombinations(digits));
